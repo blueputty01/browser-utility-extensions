@@ -1,0 +1,28 @@
+:root {
+    --background: #fff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #202124;
+    --background: #35363A;
+  }
+}
+
+body {
+  user-select: none;
+  background-color: var(--background);
+}
+
+#logo {
+  max-height: 100%;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  position: absolute;
+  top: -128px ;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}

@@ -1,0 +1,34 @@
+{
+  "folders": [
+    {
+      "path": ".",
+      "name": "Utilities"
+    }
+    // {
+    //   "path": "classroom-redirect",
+    //   "name": "Classroom Redirect"
+    // },
+    // {
+    //   "path": "clean-new-tab",
+    //   "name": "Clean New Tab"
+    // },
+    // {
+    //   "path": "college",
+    //   "name": "Accepting College"
+    // },
+    // {
+    //   "path": "quora-cleanup",
+    //   "name": "Clean up Quora"
+    // },
+    // {
+    //   "path": "se-cleanup",
+    //   "name": "Clean up Stack Exchange sites"
+    // }
+  ],
+  "settings": {
+    "window.title": "Browser Utilities",
+    "files.exclude": {
+      "node_modules/": true
+    }
+  }
+}

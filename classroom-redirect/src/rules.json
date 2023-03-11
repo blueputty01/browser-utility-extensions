@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "regexSubstitution": "classroom.google.com/u/1/c"
+      }
+    },
+    "condition": {
+      "regexFilter": "classroom.google.com/c",
+      "resourceTypes": ["main_frame"]
+    }
+  }
+]

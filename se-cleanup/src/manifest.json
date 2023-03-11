@@ -1,0 +1,37 @@
+{
+  "manifest_version": 3,
+  "name": "Stack Exchange Zen",
+  "description": "Removes recommended section on Stack Exchange sites",
+  "version": "1.0.0",
+  "permissions": [
+    "scripting"
+  ],
+  "host_permissions": [
+    "*://*.stackexchange.com/*",
+    "*://*.stackoverflow.com/*",
+    "*://*.superuser.com/*",
+    "*://*.askubuntu.com/*",
+    "*://*.serverfault.com/*",
+    "*://*.stackapps.com/*",
+    "*://*.mathoverflow.com/*"
+  ],
+  "icons": {
+    "400": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.stackexchange.com/*",
+        "*://*.stackoverflow.com/*",
+        "*://*.superuser.com/*",
+        "*://*.askubuntu.com/*",
+        "*://*.serverfault.com/*",
+        "*://*.stackapps.com/*",
+        "*://*.mathoverflow.com/*"
+      ],
+      "css": [
+        "inject.css"
+      ]
+    }
+  ]
+}

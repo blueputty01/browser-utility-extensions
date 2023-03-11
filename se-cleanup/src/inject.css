@@ -1,0 +1,39 @@
+/* site news */
+.s-sidebarwidget.s-sidebarwidget__yellow.s-anchors.s-anchors__grayscale.mb16,
+#hot-network-questions,
+/* chatting */
+.s-sidebarwidget.mb16.module,
+#left-sidebar,
+/* related questions */
+.sidebar-related,
+#newsletter-ad {
+  display: none;
+}
+/* hide entire sidebar */
+#sidebar {
+  display: none;
+}
+
+#mainbar {
+  /* width: 100% !important; */
+  margin: 0 auto !important;
+  float: none !important;
+}
+
+#content {
+  border: none !important;
+}
+
+.js-products-menu {
+  display: none !important;
+}
+
+/* ask question button */
+/* .ws-nowrap.s-btn.s-btn__primary {
+  background-color: #babfc4;
+  color: #3b4045;
+} */
+
+.s-topbar {
+  border-top: none !important;
+}

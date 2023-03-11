@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Quora",
+  "description": "Removes login requirement on some Quora pages",
+  "version": "1.0.0",
+  "permissions": [
+    "scripting"
+  ],
+  "host_permissions": [
+    "*://quora.com/*"
+  ],
+  "icons": {
+    "256": "icon-256.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.quora.com/*"
+      ],
+      "css": [
+        "inject.css"
+      ]
+    }
+  ]
+}

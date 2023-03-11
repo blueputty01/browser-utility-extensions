@@ -1,0 +1,7 @@
+.q-box {
+  filter: none !important;
+}
+
+body {
+  overflow: auto !important;
+}

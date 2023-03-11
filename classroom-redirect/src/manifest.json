@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Classroom Redirect",
+  "description": "Redirect Google Classroom Links to secondary account",
+  "version": "1.0.1",
+  "icons": {
+    "48": "img/48.png",
+    "96": "img/96.png"
+  },
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "ruleset_1",
+        "enabled": true,
+        "path": "rules.json"
+      }
+    ]
+  },
+  "host_permissions": ["*://classroom.google.com/*"],
+  "permissions": ["declarativeNetRequest"]
+}
