@@ -21,7 +21,7 @@
         },
         "condition": {
             "isUrlFilterCaseSensitive": false,
-            "urlFilter": "honorscollege",
+            "urlFilter": "rutgers.edu",
             "resourceTypes": [
                 "main_frame"
             ]
