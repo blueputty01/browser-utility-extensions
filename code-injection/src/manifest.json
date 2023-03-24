@@ -1,0 +1,12 @@
+{
+    "manifest_version": 3,
+    "name": "Code Injection",
+    "version": "1.0.0",
+    "description": "Enables code injection",
+    "permissions": [
+        "browsingData"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    }
+}
