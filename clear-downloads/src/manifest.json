@@ -1,0 +1,17 @@
+{
+   "background": {
+      "service_worker": "background.js"
+   },
+   "description": "Always clear the downloads list of all completed downloads.",
+   "manifest_version": 3,
+   "name": "Clear Downloads",
+   "icons": {
+      "128": "icon128.png",
+      "64": "icon64.png"
+   },
+   "permissions": [
+      "downloads"
+   ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "2.1.5"
+}
