@@ -1,0 +1,6 @@
+[submodule "videospeed"]
+	path = videospeed
+	url = https://github.com/igrigorik/videospeed
+[submodule "darkreader"]
+	path = darkreader
+	url = https://github.com/darkreader/darkreader
