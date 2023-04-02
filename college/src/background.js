@@ -9,28 +9,8 @@ chrome.browsingData.remove(
 );
 
 const blockUrls = [
-  'Princeton.edu',
-  'purdue.edu',
-  'umich.edu',
-  'uci.edu',
-  'UCLA',
-  'case.edu/admission/apply',
-  'ucsb.edu',
-  'Brown.edu',
-  'cornell.edu',
-  'Berkeley.edu',
-  'ucsd',
-  'cmu.edu',
-  'duke.edu',
-  'riceadmission.rice.edu',
-  'Stanford.edu',
-  'upenn.edu',
-  // 'rutgers',
-  'illinois',
-  'umd',
-  'gatech',
-  'utexas',
-  '1GyIUED23YvZp3Z7VBxOEE-qP2lkO7Ii-8lAifjiiawM', //application manger spreadsheet
+  'collegeconfidential.com',
+  'www.reddit.com/r/ApplyingToCollege/',
   'linkedin.com',
 ];
 

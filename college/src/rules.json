@@ -1,19 +1,5 @@
 [
     {
-        "id": 2,
-        "priority": 2,
-        "action": {
-            "type": "allow"
-        },
-        "condition": {
-            "isUrlFilterCaseSensitive": false,
-            "urlFilter": "collegeboard",
-            "resourceTypes": [
-                "main_frame"
-            ]
-        }
-    },
-    {
         "id": 3,
         "priority": 2,
         "action": {
@@ -22,40 +8,6 @@
         "condition": {
             "isUrlFilterCaseSensitive": false,
             "urlFilter": "rutgers.edu",
-            "resourceTypes": [
-                "main_frame"
-            ]
-        }
-    },
-    {
-        "id": 1,
-        "priority": 1,
-        "action": {
-            "type": "redirect",
-            "redirect": {
-                "url": "https://rutgers.edu/"
-            }
-        },
-        "condition": {
-            "isUrlFilterCaseSensitive": false,
-            "urlFilter": "college",
-            "resourceTypes": [
-                "main_frame"
-            ]
-        }
-    },
-    {
-        "id": 4,
-        "priority": 1,
-        "action": {
-            "type": "redirect",
-            "redirect": {
-                "url": "https://rutgers.edu/"
-            }
-        },
-        "condition": {
-            "isUrlFilterCaseSensitive": false,
-            "urlFilter": "university",
             "resourceTypes": [
                 "main_frame"
             ]
