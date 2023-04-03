@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "UA Injection",
+  "version": "1.0.0",
+  "description": "Spoofs the user agent of the browser to a specified value.",
+  "permissions": [
+    "declarativeNetRequest"
+  ],
+  "host_permissions": [
+    "*://*.bing.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+}
