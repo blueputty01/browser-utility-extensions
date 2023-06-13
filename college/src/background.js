@@ -8,16 +8,34 @@ chrome.browsingData.remove(
   }
 );
 
-const blockUrls = [
+const BLOCK_URLS = [
   'collegeconfidential.com',
-  // 'www.reddit.com/r/ApplyingToCollege/',
-  'linkedin.com',
+  'www.reddit.com/r/ApplyingToCollege/',
+  'cornell',
+  // 'linkedin.com',
 ];
 
-const newRules = [];
+const REDIRECT = 'www.cs.umd.edu/';
 
-blockUrls.forEach((domain, index) => {
-  const id = index + 3;
+const newRules = [
+  {
+    id: 1,
+    priority: 2,
+    action: {
+      type: 'allow',
+    },
+    condition: {
+      isUrlFilterCaseSensitive: false,
+      urlFilter: REDIRECT,
+      resourceTypes: ['main_frame'],
+    },
+  },
+];
+
+const offset = newRules.length + 1;
+
+BLOCK_URLS.forEach((domain, index) => {
+  const id = index + offset;
 
   newRules.push({
     id: id,
@@ -25,7 +43,7 @@ blockUrls.forEach((domain, index) => {
     action: {
       type: 'redirect',
       redirect: {
-        url: 'https://rutgers.edu/',
+        url: `https://${REDIRECT}`,
       },
     },
     condition: { urlFilter: domain, resourceTypes: ['main_frame'] },
