@@ -1,0 +1,12 @@
+body {
+  height: 10rem;
+  width: 10rem;
+  align-items: stretch;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+button {
+  padding: 0.25rem;
+}
