@@ -1,6 +1,7 @@
 const clearDownloads = function () {
-  const S_TO_MS = 1000;
-  const clearFreq = 30 * S_TO_MS;
+  const MS_TO_S = 1000;
+  const S_TO_M = 60;
+  const clearFreq = 1 * S_TO_M * MS_TO_S;
 
   setTimeout(function () {
     chrome.downloads.erase({ state: 'complete' });
