@@ -3,8 +3,8 @@
     "name": "Window Title Copier",
     "version": "1.0",
     "permissions": [
-        "activeTab",
-        "clipboardWrite"
+        "clipboardWrite",
+        "tabs"
     ],
     "action": {
         "default_popup": "popup.html"

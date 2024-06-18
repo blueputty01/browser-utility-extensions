@@ -1,6 +1,6 @@
 body {
-  height: 10rem;
-  width: 10rem;
+  min-height: 10rem;
+  min-width: 10rem;
   align-items: stretch;
   display: flex;
   flex-direction: column;

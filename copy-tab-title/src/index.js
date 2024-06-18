@@ -1,5 +1,8 @@
 const plainCopyButton = document.getElementById('plainCopyButton');
 const mdCopyButton = document.getElementById('mdCopyButton');
+
+const copyAllButton = document.getElementById('copyAllButton');
+
 const notif = document.getElementById('notif');
 
 const timeouts = [];
@@ -21,6 +24,33 @@ mdCopyButton.addEventListener('click', async function () {
   const { title, url } = await getActiveTab();
   copyToClipboard(`[${title}](${url})`, 'markdown');
 });
+
+copyAllButton.addEventListener('click', async function () {
+  copyToClipboard(await getTabs(), 'markdown');
+});
+
+// Get the current window's tabs and display them to id tabsList in popup.html in markdown format
+async function getTabs() {
+  const window = await chrome.windows.getCurrent();
+
+  const tabs = await chrome.tabs.query({ windowId: window.id });
+
+  const tabList = document.getElementById('tabsList');
+
+  console.log(tabs);
+
+  let markdown = '';
+  tabs.forEach((tab) => {
+    markdown += `[${tab.title}](${tab.url})\n`;
+  });
+  tabList.textContent = markdown;
+
+  return markdown;
+}
+
+(async () => {
+  getTabs();
+})();
 
 function copyToClipboard(text, type) {
   navigator.clipboard
