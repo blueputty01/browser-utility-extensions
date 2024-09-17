@@ -1,0 +1,28 @@
+{
+   "background": {
+      "service_worker": "background.js"
+   },
+   "action": {
+      "default_icon": "canvas.png"
+   },
+   "content_scripts": [
+      {
+         "js": [
+            "content.js"
+         ],
+         "matches": [
+            "*://*.instructure.com/*"
+         ]
+      }
+   ],
+   "description": "Open files from canvas in their own window.",
+   "icons": {
+      "512": "canvas.png"
+   },
+   "manifest_version": 3,
+   "name": "Canvas PDF Window",
+   "permissions": [
+      "activeTab"
+   ],
+   "version": "1.0"
+}
