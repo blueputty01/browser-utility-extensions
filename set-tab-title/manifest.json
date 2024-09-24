@@ -1,0 +1,23 @@
+{
+    "manifest_version": 3,
+    "name": "Tab Title Setter",
+    "version": "1.0",
+    "description": "Set the tab title to user input.",
+    "permissions": [
+        "tabs",
+        "scripting",
+        "activeTab"
+    ],
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "96": "icon.png"
+        }
+    },
+    "icons": {
+        "96": "icon.png"
+    },
+    "background": {
+        "service_worker": "background.js"
+    }
+}
