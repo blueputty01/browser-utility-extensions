@@ -1,0 +1,42 @@
+{
+   "action": {
+      "default_icon": "testudo.png"
+   },
+   "content_scripts": [
+      {
+         "js": [
+            "testudo.js"
+         ],
+         "matches": [
+            "*://app.testudo.umd.edu/soc/*"
+         ],
+         "css": [
+            "index.css"
+         ]
+      }
+   ],
+   "host_permissions": [
+      "*://search-production.ratemyprofessors.com/*",
+      "*://app.testudo.umd.edu/soc/*"
+   ],
+   "description": "Adds stats to Testudo",
+   "icons": {
+      "512": "testudo.png"
+   },
+   "manifest_version": 3,
+   "name": "Testudo Pro",
+   "permissions": [
+      "scripting",
+      "declarativeNetRequest"
+   ],
+   "version": "1.0",
+   "declarative_net_request": {
+      "rule_resources": [
+         {
+            "id": "ruleset_1",
+            "enabled": true,
+            "path": "./rules.json"
+         }
+      ]
+   }
+}
