@@ -3,7 +3,6 @@
   padding: 1px 5px;
   margin-left: 10px;
   color: #ffffff !important;
-  font-family: monospace;
 }
 
 .no-underline:hover {
@@ -17,7 +16,6 @@
   margin-top: 10px;
   border-radius: 5px;
   color: #ffffff !important;
-  font-family: monospace;
   padding: 1px;
 }
 
