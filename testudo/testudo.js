@@ -297,7 +297,7 @@ function createShareLinks() {
   // Local function to handle the copy link action
   function copyLink(courseId) {
     const link = genShareLink(courseId);
-    GM_setClipboard(link, 'text');
+    navigator.clipboard.writeText(link);
   }
 
   courseElements.forEach((courseElem) => {
@@ -594,7 +594,7 @@ function updatePTData() {
       avgGPAElem.setAttribute('data-tooltip', 'Open in PlanetTerp');
       avgGPAElem.title = courseId;
       avgGPAElem.target = '_blank';
-      avgGPAElem.innerText = avgGPA ? `AVG GPA ${avgGPA.toFixed(2)}` : 'N/A';
+      avgGPAElem.innerText = avgGPA ? `avg gpa: ${avgGPA.toFixed(2)}` : 'N/A';
 
       const shareCourseElem =
         courseIdContainer.querySelector('.share-course-div');

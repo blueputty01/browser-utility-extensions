@@ -27,7 +27,8 @@
    "name": "Testudo Pro",
    "permissions": [
       "scripting",
-      "declarativeNetRequest"
+      "declarativeNetRequest",
+      "clipboardWrite"
    ],
    "version": "1.0",
    "declarative_net_request": {
