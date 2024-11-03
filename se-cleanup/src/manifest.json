@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Style injection",
+  "name": "Stack Exchange Cleanup",
   "description": "Injects styles",
   "version": "1.0.0",
   "permissions": [
