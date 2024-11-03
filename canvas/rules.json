@@ -1,0 +1,27 @@
+[
+    {
+        "id": 1,
+        "priority": 1,
+        "action": {
+            "type": "modifyHeaders",
+            "responseHeaders": [
+                {
+                    "operation": "remove",
+                    "header": "Content-Disposition"
+                }
+            ]
+        },
+        "condition": {
+            "urlFilter": "inst-fs-iad-prod.inscloudgate.net",
+            "resourceTypes": [
+                "main_frame",
+                "sub_frame",
+                "xmlhttprequest",
+                "ping",
+                "other",
+                "script",
+                "csp_report"
+            ]
+        }
+    }
+]
