@@ -12,7 +12,32 @@
             ]
         },
         "condition": {
-            "urlFilter": "inst-fs-iad-prod.inscloudgate.net",
+            "regexFilter": "inst-fs-iad-prod\\.inscloudgate\\.net/files/.*\\.pdf.*",
+            "resourceTypes": [
+                "main_frame",
+                "sub_frame",
+                "xmlhttprequest",
+                "ping",
+                "other",
+                "script",
+                "csp_report"
+            ]
+        }
+    },
+    {
+        "id": 2,
+        "priority": 1,
+        "action": {
+            "type": "modifyHeaders",
+            "responseHeaders": [
+                {
+                    "operation": "remove",
+                    "header": "Content-Disposition"
+                }
+            ]
+        },
+        "condition": {
+            "regexFilter": "cdn\\.discordapp\\.com/attachments/.*\\.pdf.*",
             "resourceTypes": [
                 "main_frame",
                 "sub_frame",

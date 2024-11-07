@@ -3,7 +3,8 @@
       "default_icon": "canvas.png"
    },
    "host_permissions": [
-      "*://*.inscloudgate.net/*"
+      "*://*.inscloudgate.net/*",
+      "*://*.discordapp.com/*"
    ],
    "declarative_net_request": {
       "rule_resources": [
