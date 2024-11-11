@@ -12,7 +12,7 @@
             ]
         },
         "condition": {
-            "regexFilter": "inst-fs-iad-prod\\.inscloudgate\\.net/files/.*\\.pdf.*",
+            "regexFilter": ".*inst-fs-iad-prod\\.inscloudgate\\.net.*\\.pdf.*",
             "resourceTypes": [
                 "main_frame",
                 "sub_frame",
