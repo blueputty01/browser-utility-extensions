@@ -10,7 +10,7 @@ function injectScript() {
     if (url.includes('timer')) {
       isolateWidget('#timer-stopwatch-container');
     } else if (url.includes('weather')) {
-      isolateWidget('#wob_wc');
+      // isolateWidget('#wob_wc');
     }
 
     function isolateWidget(id) {
