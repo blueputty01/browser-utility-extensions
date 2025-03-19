@@ -7,24 +7,37 @@ function injectScript() {
   const url = window.location.href;
 
   if (url.includes(`www.google.com/search?q`)) {
-    if (url.includes('timer')) {
-      isolateWidget('#timer-stopwatch-container');
-    } else if (url.includes('weather')) {
-      // isolateWidget('#wob_wc');
+    if (url.includes("timer")) {
+      const ele = document.querySelector("[data-use-timer-ui]");
+      document.body.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+          isolateWidget(ele.parentElement);
+        }
+      });
+    } else if (url.includes("weather")) {
+      const ele = document.querySelector("[data-ve-view]");
+      document.body.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+          isolateWidget(ele.parentElement);
+        }
+      });
     }
 
-    function isolateWidget(id) {
-      $(id).show().parentsUntil('body').andSelf().siblings().hide();
+    function isolateWidget(ele) {
+      ele.style.position = "fixed";
+      ele.style.top = 0;
+      ele.style.left = "50%";
+      ele.style.transform = "translateX(-50%)";
+      ele.style.zIndex = 999999;
 
-      document.getElementById('main').style.minWidth = 0;
-      document.getElementById('rcnt').style.maxWidth = '100vw';
-      document.getElementById('center_col').style.marginLeft = 'auto';
-      document.getElementById('center_col').style.marginRight = 'auto';
+      const background = document.createElement("div");
+      background.style.position = "fixed";
+      background.style.inset = 0;
+      background.style.backgroundColor = "#e4edff";
+      background.style.zIndex = 999998;
+      document.body.appendChild(background);
 
-      const cnt = document.getElementById('cnt');
-      cnt.style.display = 'flex';
-      cnt.style.justifyContent = 'center';
-      cnt.style.alignItems = 'center';
+      document.body.style.overflow = "hidden";
     }
   }
 }
