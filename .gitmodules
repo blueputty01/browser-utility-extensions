@@ -4,6 +4,6 @@
 [submodule "darkreader"]
 	path = darkreader
 	url = https://github.com/darkreader/darkreader
-[submodule "vimium"]
-	path = vimium
-	url = https://github.com/philc/vimium
+[submodule "Surfingkeys"]
+	path = Surfingkeys
+	url = https://github.com/brookhong/Surfingkeys
