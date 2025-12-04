@@ -2,6 +2,8 @@ const plainCopyButton = document.getElementById('plainCopyButton');
 const mdCopyButton = document.getElementById('mdCopyButton');
 
 const copyAllButton = document.getElementById('copyAllButton');
+const pasteButton = document.getElementById('pasteButton');
+const linkInput = document.getElementById('linkInput');
 
 const notif = document.getElementById('notif');
 
@@ -29,6 +31,10 @@ copyAllButton.addEventListener('click', async function () {
   copyToClipboard(await getTabs(), 'markdown');
 });
 
+pasteButton.addEventListener('click', async function () {
+  await openLinksFromInput();
+});
+
 // Get the current window's tabs and display them to id tabsList in popup.html in markdown format
 async function getTabs() {
   const window = await chrome.windows.getCurrent();
@@ -46,6 +52,38 @@ async function getTabs() {
   tabList.textContent = markdown;
 
   return markdown;
+}
+
+// Parse markdown links from input and open them in new windows
+async function openLinksFromInput() {
+  const inputText = linkInput.value;
+
+  // Split by double line breaks to get windows
+  const windows = inputText.split('\n\n').filter((w) => w.trim());
+
+  for (const windowContent of windows) {
+    // Extract all markdown links [text](url)
+    const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g;
+    const urls = [];
+    let match;
+
+    while ((match = linkRegex.exec(windowContent)) !== null) {
+      urls.push(match[2]);
+    }
+
+    // Open all URLs from this window group
+    if (urls.length > 0) {
+      const newWindow = await chrome.windows.create({ url: urls[0] });
+
+      // Open remaining URLs in the same window
+      for (let i = 1; i < urls.length; i++) {
+        await chrome.tabs.create({ windowId: newWindow.id, url: urls[i] });
+      }
+    }
+  }
+
+  showNotification(`Opened ${windows.length} window(s)`);
+  linkInput.value = '';
 }
 
 (async () => {
@@ -69,4 +107,13 @@ function copyToClipboard(text, type) {
     .catch(function (error) {
       console.error('Unable to copy to clipboard:', error);
     });
+}
+
+function showNotification(message) {
+  notif.textContent = message;
+  timeouts.forEach((timeout) => clearTimeout(timeout));
+  const timeout = setTimeout(function () {
+    notif.textContent = '';
+  }, 1500);
+  timeouts.push(timeout);
 }
